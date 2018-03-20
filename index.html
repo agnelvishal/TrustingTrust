@@ -42,7 +42,7 @@
 </head>
 <body>
 
-	<div id="preloader">3loading...</div> <!-- TRANSLATE THIS -->
+	<div id="preloader">This text will disppear faster than you can read. Maybe the day technology can overtake us is not far.</div> <!-- TRANSLATE THIS -->
 
 	<div style="display:none" id="main">
 		<div id="slideshow_container">
@@ -57,8 +57,21 @@
 
 	</div>
 
+<script>
+document.write("@"+window.innerWidth);
+document.write("@"+window.innerHeight);
+document.write("@"+screen.width);
+document.write("@"+screen.height);
+
+if(window.matchMedia("(max-width:979px)").matches)
+{
+document.write("max-width:630px");
+}
+else
+document.write("no");
 
 
+</script>
 </body>
 </html>
 
@@ -76,7 +89,7 @@
 <script src="js/lib/tweenjs-0.6.2.min.js?v11"></script>
 <script>Ticker.framerate=60; Ticker.paused=true;</script>
 
-<script src="js/lib/screenfull.js?v11"></script>
+
 
 
 <!-- Core Engine -->

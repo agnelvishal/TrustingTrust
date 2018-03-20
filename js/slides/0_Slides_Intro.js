@@ -85,7 +85,7 @@ SLIDES.push({
 			o.loading_button.activate();
 			o.loading_button.config.onclick = function(){
 				publish("start/game");
-			screenfull.request();
+		//	screenfull.request();
 
 
 				Loader.sounds.bg_music.volume(0.75).loop(true).play(); // play music!
