@@ -1,4 +1,3 @@
-
 <!doctype>
 <html>
 <head>
@@ -14,121 +13,78 @@
 <!--meta name="viewport" content="width=device-width, initial-scale=1.0"-->
 	<!-- <meta name="viewport" content="width=device-width, initial-scale=0.5 maximum-scale=10.0, minimum-scale=0.1, user-scalable=yes"/>  -->
 	<link rel="manifest" href="manifest.json">
+<link rel="shortcut icon" type="image/x-icon" href="assets/icons/favicon.ico">
 
 	<!-- TO TRANSLATE: "name", "description" -->
 	<meta itemprop="name" content="The Evolution of Trust">
 	<meta itemprop="description" content="an interactive guide to the game theory of why &amp; how we trust each other">
 	<meta itemprop="image" content="http://ncase.me/trust/social/thumbnail.png">
 
+	
 	<!-- TO TRANSLATE: "name", "description" -->
 	<meta name="twitter:card" content="summary_large_image">
-	<meta name="twitter:site" content="@ncasenmare">
+	<meta name="twitter:site" content="@agnelvishal">
 	<meta name="twitter:title" content="The Evolution of Trust">
 	<meta name="twitter:description" content="an interactive guide to the game theory of why &amp; how we trust each other">
-	<meta name="twitter:creator" content="@ncasenmare">
+	<meta name="twitter:creator" content="@agnelvishal">
 	<meta name="twitter:image" content="http://ncase.me/trust/social/thumbnail.png">
 
 	<!-- TO TRANSLATE: "name", "description" -->
 	<meta property="og:title" content="The Evolution of Trust">
 	<meta property="og:type" content="website">
-	<meta property="og:url" content="http://ncase.me/trust/">
+	<meta property="og:url" content="http://www.agnelvishal.github.io/TrustingTrust">
 	<meta property="og:image" content="http://ncase.me/trust/social/thumbnail.png">
 	<meta property="og:description" content="an interactive guide to the game theory of why &amp; how we trust each other">
 
-	<!-- Styles -->
-	<link rel="stylesheet" href="css/slides.css?v11">
-	<link rel="stylesheet" href="css/balloon.css?v11">
-
-</head>
-<body>
-
-	<div id="preloader">This text will disppear faster than you can read. Maybe the day technology can overtake us is not far.</div> <!-- TRANSLATE THIS -->
-
-	<div style="display:none" id="main">
-		<div id="slideshow_container">
-			<div id="slideshow"></div>
-
-
-
-	</div>
-
-
-	<div style="display:none" >
-
-	</div>
-
-<script>
-document.write("@"+window.innerWidth);
-document.write("@"+window.innerHeight);
-document.write("@"+screen.width);
-document.write("@"+screen.height);
-
-if(window.matchMedia("(max-width:979px)").matches)
-{
-document.write("max-width:630px");
+<style>
+#avImgBrowser {
+max-width: 4%;
+    height: auto;
 }
-else
-document.write("no");
+
+</style>
+</head>
+
+<body id="avbody">
+<script>
+if(screen.width>500)
+{
+  document.location.replace('pc/index.html');
+}
+
+
 
 
 </script>
+
+
+<font size="6">
+To continue, please<br>
+  1) Open the browser option menu <img id="avImgBrowser"> which is usually at top right corner<br>
+ 2) Tap on "Add to homescreen" and access it from homescreen <br>
+
+
+</font>
+<center>
+<img id="avBrowserBtn">
+</center>
+<script>
+  if(/iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream)
+   {
+   document.getElementById('avImgBrowser').src ="assets/browser/ios.png";
+   document.getElementById('avBrowserBtn').src ="assets/browser/marked-ios.png";   
+   }  
+else
+  {
+  document.getElementById('avImgBrowser').src ="assets/browser/android.png";
+  document.getElementById('avBrowserBtn').src ="assets/browser/marked.png"; 
+  }
+
+</script>
+
+<font size="6">
+Alternatively you can play in desktop.
+</font>
 </body>
+
 </html>
-
-<!-- Libraries -->
-
-<script src="js/lib/helpers.js?v11"></script>
-
-<script src="js/lib/pegasus.js?v11"></script>
-<script>var c_ = {};</script>
-<script src="js/lib/minpubsub.src.js?v11"></script>
-<script src="js/lib/q.js?v11"></script>
-<script src="js/lib/pixi.min.js?v11"></script>
-<script src="js/lib/howler.js?v11"></script>
-<script>var createjs = window;</script>
-<script src="js/lib/tweenjs-0.6.2.min.js?v11"></script>
-<script>Ticker.framerate=60; Ticker.paused=true;</script>
-
-
-
-
-<!-- Core Engine -->
-<script src="js/core/Loader.js?v11"></script>
-<script src="js/core/Slideshow.js?v11"></script>
-
-
-
-<script src="js/core/Button.js?v11"></script>
-<script src="js/core/TextBox.js?v11"></script>
-<script src="js/core/Words.js?v11"></script>
-<script src="js/core/IncDecNumber.js?v11"></script>
-<script src="js/core/Slider.js?v11"></script>
-
-<script src="js/core/Background.js?v11"></script>
-<script src="js/core/ImageBox.js?v11"></script>
-<script src="js/core/PayoffsUI.js?v11"></script>
-
-<!-- Simulations -->
-
-<script src="js/sims/PD.js?v11"></script>
-<script src="js/sims/Iterated.js?v11"></script>
-<script src="js/sims/Tournament.js?v11"></script>
-<script src="js/sims/SandboxUI.js?v11"></script>
-
-<!--script src="js/sims/Splash.js?v11"></script-->
-
-
-<!-- Slides -->
-<script src="js/slides/0_Slides_Intro.js?v11"></script>
-<script src="js/slides/1_Slides_OneOff.js?v11"></script>
-<script src="js/slides/2_Slides_Iterated.js?v11"></script>
-<script src="js/slides/3_Slides_Tournament.js?v11"></script>
-<script src="js/slides/4_Slides_Evolution.js?v11"></script>
-<script src="js/slides/5_Slides_Distrust.js?v11"></script>
-<script src="js/slides/6_Slides_Noise.js?v11"></script>
-<script src="js/slides/7_Slides_Sandbox.js?v11"></script>
-<script src="js/slides/8_Slides_Conclusion.js?v11"></script>
-<script src="js/slides/9_Slides_Credits.js?v11"></script>
-
-<!-- Main Code -->
-<script src="js/main.js?v11"></script>
