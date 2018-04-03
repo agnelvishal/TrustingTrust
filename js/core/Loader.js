@@ -69,6 +69,10 @@ Loader.loadAssets = function(manifest, completeCallback, progressCallback){
 		// Is MP3. Leave it to Howler.
 		if(src.slice(-4)==".mp3"){
 
+			 if(src.slice(-12)=="bg_music.mp3"){
+                              continue;
+                          }
+
 			var sound = new Howl({ src:[src] });
 			_soundsToLoad++;
 
