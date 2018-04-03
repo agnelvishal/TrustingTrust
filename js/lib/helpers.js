@@ -55,7 +55,9 @@ var _configText = function(config, dom){
 	if(config.color!==undefined) dom.style.color = config.color;
 	if(config.size!==undefined) dom.style.fontSize = config.size;
 	if(config.width!==undefined) dom.style.width = config.width;
-	if(config.lineHeight) dom.style.lineHeight = config.lineHeight+"em";
+	if(config.lineHeight)
+  {dom.style.lineHeight = config.lineHeight+"em"; }
+	if(config.fontWeight!==undefined) {dom.style.fontWeight=config.fontWeight;  }
 }
 
 // Tween

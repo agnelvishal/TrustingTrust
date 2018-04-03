@@ -4,16 +4,7 @@ Loader.manifest = {};
 Loader.manifestPreload = {}; // For Preloader
 Loader.sounds = {};
 
-/***************
 
-Actually LOAD all the assets in a manifest. Like so:
-
-Loader.loadAssets(Loader.manifest, function(){
-	Loader.sceneManager.gotoScene(Loader.START_SCENE);
-	Loader.startUpdateAndDraw();
-});
-
-***************/
 Loader.loadAssets = function(manifest, completeCallback, progressCallback){
 
 	var deferred = Q.defer();
@@ -26,7 +17,9 @@ Loader.loadAssets = function(manifest, completeCallback, progressCallback){
 	var _totalAssetsLoaded = 0;
 	var _totalAssetsToLoad = 0;
 	for(var key in manifest){
+
 		var src = manifest[key];
+
 
 		// Loading sounds or images?
 		if(src.slice(-4)==".mp3") _isLoadingSounds=1;
@@ -64,6 +57,8 @@ Loader.loadAssets = function(manifest, completeCallback, progressCallback){
 		if(_soundsToLoad==0) _onGroupLoaded();
 	};
 
+
+
 	// PIXI - Loading Images & Sprites (or pass it to Howler)
 	var loader = PIXI.loader;
 	var resources = PIXI.loader.resources;
@@ -73,8 +68,15 @@ Loader.loadAssets = function(manifest, completeCallback, progressCallback){
 
 		// Is MP3. Leave it to Howler.
 		if(src.slice(-4)==".mp3"){
+
+			 if(src.slice(-12)=="bg_music.mp3"){
+                              continue;
+                          }
+
 			var sound = new Howl({ src:[src] });
 			_soundsToLoad++;
+
+                           
 			sound.once('load', _onSoundLoad);
 			Loader.sounds[key] = sound;
 			continue;

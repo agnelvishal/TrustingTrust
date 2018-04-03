@@ -9,7 +9,6 @@
       "sizes": "668x668",
       "type": "image/png"
     },
-
     {
       "src": "assets/icons/favicon-192.png",
       "sizes": "192x192",
@@ -48,7 +47,6 @@
 
 
   ],
-  "start_url": "mobileIndex.html", 
-  "display": "fullscreen",
-  "orientation": "landscape"
+  "start_url": "index.html", 
+  "display": "fullscreen"
 }

@@ -79,6 +79,7 @@ SLIDES.push({
 		// PRELOADER
 		listen(self,"preloader/progress", function(ratio){
 			_loadingWords(ratio);
+
 		});
 		listen(self,"preloader/done", function(){
 			o.loading_button.setText("loading_done");
@@ -86,9 +87,11 @@ SLIDES.push({
 			o.loading_button.config.onclick = function(){
 				publish("start/game");
 		//	screenfull.request();
-
-
-				Loader.sounds.bg_music.volume(0.75).loop(true).play(); // play music!
+                            
+   var sound = new Howl({ src:["assets/sounds/bg_music.mp3"] });
+sound.once('load',function() {sound.volume(0.75).loop(true).play();} );
+  
+	
 			};
 		});
 
