@@ -1,14 +1,4 @@
-/*****************************
 
-{
-	x:x, y:y, max:5, min:-5,
-	value: PD.PAYOFFS_DEFAULT[letter],
-	onchange: function(value){
-		publish("pd/editPayoffs/"+letter,[value]);
-	}
-}
-
-*****************************/
 function IncDecNumber(config){
 
 	var self = this;
