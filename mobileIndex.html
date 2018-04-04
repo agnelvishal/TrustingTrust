@@ -36,9 +36,108 @@
 	<meta property="og:description" content="an interactive guide to the game theory of why &amp; how we trust each other">
 
 	<!-- Styles -->
+	<style>
+	@font-face{
+		font-family: 'FuturaHandwritten';
+		font-style: normal;
+		src: url('css/FuturaHandwritten.ttf') format('truetype');
+	}
+
+	html,body{
+		width: 100%;
+		height: 100%;
+		touch-action: pinch-zoom;
+
+	}
+
+	body{
+
+		margin:0;
+					overflow: hidden;
+
+		background: #fff;
+
+		font-family: 'FuturaHandwritten';
+		color: #333;
+		font-size: 20px;
+
+	}
+	#preloader{
+		position: absolute;
+			margin: auto;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			width: 200px;
+			height: 50px;
+			font-size: 30px;
+			text-align: center;
+	}
+	#main{
+		width: 100%;
+		height: 100%;
+		position: relative;
+		overflow: hidden;
+
+	}
+
+
+
+	#slideshow_container{
+		width:0; height:0;
+		position:absolute;
+		margin:auto;
+		top:0; left:0; right:0; bottom:0;
+	}
+	#slideshow{
+
+		/*border: 1px solid rgba(0,0,0,0.2);*/
+		width:960px;
+		height:540px;
+
+		/* Center this thing */
+		position: absolute;
+		left:-480px;
+		top:-270px;
+
+	}
+
+
+	s{
+		text-decoration: line-through;
+	}
+	.object{
+		position: absolute;
+		transition: left 0.5s ease-in-out, top 0.5s ease-in-out;
+	}
+	.fader{
+		transition: opacity 0.5s ease-in-out !important;
+	}
+
+	/******** Text Box ********/
+
+	.textbox{}
+	.textbox > div{
+		position: absolute;
+	}
+	/* fake bold */
+	.textbox b{
+		font-weight: normal;
+		text-shadow:1px 0 0 currentColor;
+	}
+
+
+	.label{
+		position: absolute;
+	}
+
+    </style>
+
+		<noscript id="deferred-styles">
 	<link rel="stylesheet" href="css/slides.css?v11">
 	<link rel="stylesheet" href="css/balloon.css?v11">
-
+</noscript>
 </head>
 <body>
 
@@ -87,12 +186,12 @@
 <script src="js/core/Button.js?v11"></script>
 <script src="js/core/TextBox.js?v11"></script>
 <script src="js/core/Words.js?v11"></script>
-<script src="js/core/IncDecNumber.js?v11"></script>
-<script src="js/core/Slider.js?v11"></script>
+<script defer src="js/core/IncDecNumber.js?v11"></script>
+<script defer src="js/core/Slider.js?v11"></script>
 
-<script src="js/core/Background.js?v11"></script>
+<script defer src="js/core/Background.js?v11"></script>
 <script src="js/core/ImageBox.js?v11"></script>
-<script src="js/core/PayoffsUI.js?v11"></script>
+<script defer src="js/core/PayoffsUI.js?v11"></script>
 
 <!-- Simulations -->
 
@@ -116,5 +215,18 @@
 <script defer src="js/slides/8_Slides_Conclusion.js?v11"></script>
 <script defer src="js/slides/9_Slides_Credits.js?v11"></script>
 
+<script>
+      var loadDeferredStyles = function() {
+        var addStylesNode = document.getElementById("deferred-styles");
+        var replacement = document.createElement("div");
+        replacement.innerHTML = addStylesNode.textContent;
+        document.body.appendChild(replacement)
+        addStylesNode.parentElement.removeChild(addStylesNode);
+      };
+      var raf = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
+          window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+      if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
+      else window.addEventListener('load', loadDeferredStyles);
+    </script>
 <!-- Main Code -->
 <script src="js/main.js?v11"></script>
