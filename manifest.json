@@ -48,7 +48,9 @@
 
 
   ],
-  "start_url": "mobileIndex.html", 
+  "start_url": "mobileIndex.html",
   "display": "fullscreen",
-  "orientation": "landscape"
+  "orientation": "landscape",
+  "background_color": "#FFF",
+  "theme_color": "#2196F3
 }
