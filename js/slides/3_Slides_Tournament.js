@@ -23,7 +23,7 @@ SLIDES.push({
 		// Words to the side
 		self.add({
 			id:"text", type:"TextBox",
-			x:510, y:30, width:450, height:500,
+			x:510, y:20, width:450, height:500,
 			text_id:"place_your_bets"
 		});
 
@@ -102,7 +102,7 @@ SLIDES.push({
 		// Words to the side
 		self.add({
 			id:"text_extra", type:"TextBox",
-		x:510, y:155, width:450, height:500
+		x:510, y:140, width:450, height:500
 		});
 
 		var showTournament = function(num){
@@ -166,7 +166,7 @@ SLIDES.push({
 		// "Next Match" Button
 		self.add({
 			id:"button", type:"Button",
-						x:510, y:525, size:"long",
+						x:510, y:500, size:"long",
 			text_id:"next_match",
 			onclick:function(){
 				_matchNumber++;
