@@ -23,7 +23,7 @@ SLIDES.push({
 		// Words to the side
 		self.add({
 			id:"text", type:"TextBox",
-			x:510, y:20, width:450, height:500,
+			x:490, y:10, width:450, height:500,
 			text_id:"place_your_bets"
 		});
 
@@ -41,11 +41,11 @@ SLIDES.push({
 				});
 			})(character, x, y);
 		};
-		_addButton("tft", 510, 220+25);
+		_addButton("tft", 490, 220+25);
 		_addButton("all_c", 730, 220+25);
-		_addButton("all_d", 510, 300+25);
+		_addButton("all_d", 490, 300+25);
 		_addButton("grudge", 730, 300+25);
-		_addButton("prober", 510, 380+25);
+		_addButton("prober", 490, 380+25);
 
 		// WHO'S WHO?
 		self.add({
@@ -81,7 +81,7 @@ SLIDES.push({
 		// "First Match" Button
 		self.add({
 			id:"button", type:"Button",
-			x:510, y:130,
+			x:490, y:130,
 			text_id:"first_match",
 			message: "slideshow/next"
 		});
@@ -102,7 +102,7 @@ SLIDES.push({
 		// Words to the side
 		self.add({
 			id:"text_extra", type:"TextBox",
-		x:510, y:140, width:450, height:500
+		x:490, y:130, width:450, height:500
 		});
 
 		var showTournament = function(num){
@@ -166,7 +166,7 @@ SLIDES.push({
 		// "Next Match" Button
 		self.add({
 			id:"button", type:"Button",
-						x:510, y:500, size:"long",
+						x:490, y:500, size:"long",
 			text_id:"next_match",
 			onclick:function(){
 				_matchNumber++;
@@ -213,7 +213,7 @@ SLIDES.push({
 		// Next...
 		self.add({
 			id:"button", type:"Button",
-			x:510, y:430, size:"long",
+			x:490, y:430, size:"long",
 			text_id:"tournament_teaser",
 			message: "slideshow/next"
 		});
