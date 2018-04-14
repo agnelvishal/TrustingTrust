@@ -198,7 +198,7 @@ sound.fade(0.75,0,1000);
 
 					// NEW OPPONENT
 
-
+        	Loader.sounds.whoosh.play(); 
 						publish("iterated/newOpponent",[ROUNDS[ROUND_INDEX].id]);
 						self.objects.scoreboard.reset();
 						_showInfo();
