@@ -81,6 +81,7 @@ SLIDES.push({
 	onstart: function(self){
 
 		var o = self.objects;
+var avFirstTime=true;
 
 		// PUBLISH IT
 		if(_.answer=="COOPERATE"){
@@ -123,6 +124,27 @@ SLIDES.push({
 			infoWords = infoWords.replace(/\[X\]/g, (ROUND_INDEX+1)+"");
 			infoWords = infoWords.replace(/\[Y\]/g, (ROUNDS.length)+"");
 			self.objects.info.setText(infoWords);
+
+var jokerimg
+function showimg()
+{
+			jokerimg = document.createElement("img");
+			jokerimg.id = "jokersmall";
+			jokerimg.setAttribute("src","assets/jokercard.png");
+			self.dom.appendChild(jokerimg);
+}
+
+			if(ROUND_INDEX==1&&avFirstTime)
+			{ 	avFirstTime=false;
+sound.fade(0.75,0,1000);
+				var soundjok = new Howl({ src:["assets/sounds/jokerMorals.mp3"] });
+		 soundjok.once('load',function() {showimg();soundjok.volume(1.0).loop(false).play();} );
+		 soundjok.on('end', function(){
+			 jokerimg.style.visibility ='hidden';
+			 sound.fade(0,.75,11000);
+
+		 });
+  }
 		};
 
 		// HIDE
@@ -136,12 +158,12 @@ SLIDES.push({
 			{id:"tft", num:1},
 		];*/
 		var ROUNDS = [ // and min & max score...
-			{id:"tft", num:5}, // min 2, max 11
-			{id:"all_d", num:4}, // min -4, max 0
-			{id:"all_c", num:4}, // min 8, max 12
-			{id:"grudge", num:5}, // min -1, max 11
-			{id:"prober", num:7} // min 2, max 15
-		]; // TOTAL... MIN 7, MAX 49
+			{id:"tft", num:2}, // min 2, max 5
+			{id:"all_d", num:2}, // min -2, max 0
+			{id:"all_c", num:2}, // min 4, max 3
+			{id:"grudge", num:3}, // min 1, max 7
+			{id:"prober", num:3} // min 0, max 5
+		]; // TOTAL... MIN 5, MAX 20
 		ROUND_INDEX = 0;
 		ROUND_NUM = 0;
 

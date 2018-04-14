@@ -24,13 +24,13 @@ SLIDES.push({
 		self.add({
 			id:"labelYou", type:"TextBox",
 			x:211, y:201, width:50, height:50,
-			align:"center", color:"#aaa", size:17,
+			 align:"center", color:"#262626", size:17,
 			text_id:"label_you"
 		});
 		self.add({
 			id:"labelThem", type:"TextBox",
 			x:702, y:189, width:50, height:50,
-			align:"center", color:"#aaa", size:17,
+				align:"center", color:"#262626", size:17,
 			text_id:"label_them"
 		});
 
@@ -112,7 +112,7 @@ SLIDES.push({
 		self.remove("btnCooperate");
 		self.add({
 			id:"btnNext", type:"Button", x:304, y:481, size:"long",
-			text_id:"oneoff_button_next", 
+			text_id:"oneoff_button_next",
 			message:"slideshow/next"
 		});
 
@@ -132,4 +132,3 @@ SLIDES.push({
 	}
 
 });
-

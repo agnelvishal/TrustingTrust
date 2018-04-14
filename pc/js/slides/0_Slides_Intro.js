@@ -32,14 +32,27 @@ Loader.addToManifest(Loader.manifest,{
 	cssAsset12: "assets/tournament/score_small.png",
 
 	// Music!
-	bg_music: "assets/sounds/bg_music.mp3",
+
+
 
 	// IMAGE BOXES
 	image1: "assets/evolution/evolution_intro.png",
 	image2: "assets/conclusion/summary.png",
-	image3: "assets/conclusion/truce.jpg",
+	imageg1: "assets/generalInfo/1.jpg",
+	imageg2: "assets/generalInfo/2.jpg",
+	imageg3: "assets/generalInfo/3.jpg",
+	imageg4: "assets/generalInfo/4.jpg",
+	imageg5: "assets/generalInfo/5.jpg",
+	imageg6: "assets/generalInfo/6.jpg",
+
+	 joker: "assets/joker.jpg",
+	 jokercard: "assets/jokercard.png"
+
 
 });
+
+var sound;
+
 
 SLIDES.push({
 
@@ -54,7 +67,7 @@ SLIDES.push({
 		// TITLE TEXT
 		self.add({
 			id:"title", type:"TextBox",
-			x:130, y:80, width:700,
+			x:130, y:170, width:700,
 			size:100, lineHeight:0.9, align:"center",
 			text_id:"title"
 		});
@@ -85,7 +98,11 @@ SLIDES.push({
 			o.loading_button.activate();
 			o.loading_button.config.onclick = function(){
 				publish("start/game");
-				Loader.sounds.bg_music.volume(0.75).loop(true).play(); // play music!
+	screenfull.request();
+
+				sound = new Howl({ src:["assets/sounds/bg_music.mp3"] });
+		 sound.once('load',function() {sound.volume(0.75).loop(true).play();} );
+
 			};
 		});
 
@@ -108,7 +125,7 @@ SLIDES.push({
 	onstart: function(self){
 
 		var o = self.objects;
-		
+
 		// Circular Wordbox
 		self.add({
 			id:"intro_text", type:"TextBox",
@@ -119,7 +136,7 @@ SLIDES.push({
 		// Button
 		self.add({
 			id:"intro_button", type:"Button", x:304, y:466, size:"long",
-			text_id:"intro_button", 
+			text_id:"intro_button",
 			message:"slideshow/scratch"
 		});
 

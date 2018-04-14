@@ -1,7 +1,6 @@
 SLIDES.push({
 	id: "conclusion",
 	onstart: function(self){
-
 		// WORDS
 		self.add({
 			id:"text1", type:"TextBox",
@@ -53,7 +52,7 @@ SLIDES.push({
 
 		// Button
 		self.add({
-			id:"button", type:"Button", x:615, y:481, 
+			id:"button", type:"Button", x:615, y:481,
 			text_id:"conclusion_btn", size:"long",
 			message:"slideshow/scratch"
 		});
@@ -79,7 +78,7 @@ SLIDES.push({
 
 		// Button
 		self.add({
-			id:"button", type:"Button", x:385, y:466, 
+			id:"button", type:"Button", x:385, y:466,
 			text_id:"outro_1_btn",
 			message:"slideshow/next"
 		});
@@ -99,18 +98,13 @@ SLIDES.push({
 		// Text
 		self.add({
 			id:"text", type:"TextBox",
-			x:160, y:30, width:640, height:500, align:"center", size:22,
+			x:160, y:200, width:640, height:500, align:"center", size:35,
 			text_id:"outro_2"
 		});
 		_hide(o.text); _fadeIn(o.text, 100);
 
 		// Photo
-		self.add({
-			id:"img", type:"ImageBox",
-			src: "assets/conclusion/truce.jpg",
-			x:228, y:90, width:500,
-		});
-		_hide(o.img); _fadeIn(o.img, 200);
+
 
 		// Text 2
 		self.add({
@@ -123,7 +117,7 @@ SLIDES.push({
 
 		// Button
 		self.add({
-			id:"button", type:"Button", x:427, y:466, 
+			id:"button", type:"Button", x:427, y:466,
 			text_id:"outro_2_btn", size:"short",
 			message:"slideshow/scratch"
 		});

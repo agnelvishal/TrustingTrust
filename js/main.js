@@ -2,7 +2,7 @@ var slideshow;
 window.onload = function(){
 
 
-//	document.addEventListener("click",function(){screenfull.request();},false);
+	//document.addEventListener("click",function(){screenfull.request();},false);
 
 	// PRELOADER
 	Q.all([

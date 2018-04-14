@@ -1,5 +1,5 @@
 var PEEP_METADATA = {
-	   tft: {frame:0, color:"#4089DD"}, 
+	   tft: {frame:0, color:"#4089DD"},
 	 all_d: {frame:1, color:"#52537F"},
 	 all_c: {frame:2, color:"#FF75FF"},
 	grudge: {frame:3, color:"#efc701"},
@@ -62,7 +62,7 @@ PD.playOneGame = function(playerA, playerB){
 	// Noise: random mistakes, flip around!
 	if(Math.random()<PD.NOISE) A = ((A==PD.COOPERATE) ? PD.CHEAT : PD.COOPERATE);
 	if(Math.random()<PD.NOISE) B = ((B==PD.COOPERATE) ? PD.CHEAT : PD.COOPERATE);
-	
+
 	// Get payoffs
 	var payoffs = PD.getPayoffs(A,B);
 
@@ -116,7 +116,7 @@ PD.playOneTournament = function(agents, turns){
 		for(var j=i+1; j<agents.length; j++){
 			var playerB = agents[j];
 			PD.playRepeatedGame(playerA, playerB, turns);
-		}	
+		}
 	}
 
 };
@@ -218,7 +218,7 @@ function Logic_prober(){
 
 	var self = this;
 
-	var moves = [PD.COOPERATE, PD.CHEAT, PD.COOPERATE, PD.COOPERATE];
+	var moves = [PD.COOPERATE, PD.CHEAT];
 	var everCheatedMe = false;
 
 	var otherMove = PD.COOPERATE;

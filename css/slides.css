@@ -14,7 +14,7 @@ html,body{
 body{
 
 	margin:0;
-        overflow: hidden;
+  overflow: hidden;
 
 	background: #fff;
 
@@ -22,6 +22,14 @@ body{
 	color: #333;
 	font-size: 20px;
 
+}
+
+
+#jokersmall{
+
+	position: absolute;
+	top: 5%;
+	left:65%;
 }
 #preloader{
 	position: absolute;
@@ -43,16 +51,14 @@ body{
 
 }
 
-
-
 #slideshow_container{
 	width:0; height:0;
 	position:absolute;
 	margin:auto;
 	top:0; left:0; right:0; bottom:0;
 }
-#slideshow{
 
+#slideshow{
 	/*border: 1px solid rgba(0,0,0,0.2);*/
 	width:960px;
 	height:540px;
@@ -61,7 +67,6 @@ body{
 	position: absolute;
 	left:-480px;
 	top:-270px;
-
 }
 
 
@@ -336,6 +341,7 @@ s{
 .character{
 	position: absolute;
 	height: 114px;
+
 }
 .character #peep{
 	background: url(../assets/tournament/peep_characters.png);
@@ -345,6 +351,9 @@ s{
 	top: -5px;
     left: -10px;
 }
+
+
+
 .character #desc{
 	width: calc(100% - 100px);
 	font-size: 18px;
@@ -364,8 +373,8 @@ s{
 .tft{ color:#4089DD; }
 .all_d{ color:#52537F; }
 .all_c{ color:#FF75FF; }
-.grudge{ color:#a38801; }
-.prober{ color:#ea910c; }
+.grudge{ color:#efc701; }
+.prober{ color:#f6b24c; }
 .tf2t{ color:#88A8CE; }
 .pavlov{ color:#86C448; }
 .random{ color:#FF5E5E; }

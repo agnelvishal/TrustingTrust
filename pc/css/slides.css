@@ -10,7 +10,7 @@ html,body{
 }
 
 body{
-	
+
 	margin:0;
 	overflow: hidden;
 
@@ -21,6 +21,14 @@ body{
 	font-size: 20px;
 
 }
+
+#jokersmall{
+
+	position: absolute;
+	top: 5%;
+	left:65%;
+}
+
 #preloader{
 	position: absolute;
     margin: auto;
@@ -50,20 +58,6 @@ s{
 	text-decoration: line-through;
 }
 
-#translations{
-	margin: 10px auto;
-    font-size: 12px;
-    line-height: 21px;
-    color: #fff;
-    text-align: center;
-    width: 900px;
-}
-#translations a{
-	color:#dd4040;
-}
-#translations a:hover{
-	color:#ee5151;
-}
 
 
 
@@ -129,11 +123,11 @@ s{
 #slideshow_container{
 	width:0; height:0;
 	position:absolute;
-	margin:auto; 
+	margin:auto;
 	top:0; left:0; right:0; bottom:0;
 }
 #slideshow{
-	
+
 	/*border: 1px solid rgba(0,0,0,0.2);*/
 	width:960px;
 	height:540px;
@@ -200,7 +194,7 @@ s{
 	cursor: default;
 }
 .button #text{
-	
+
 	font-family: 'FuturaHandwritten';
 	color: #000;
 	font-size: 24px;
@@ -286,7 +280,7 @@ s{
 	-webkit-user-select: none;  /* Chrome all / Safari all */
 	-moz-user-select: none;     /* Firefox all */
 	-ms-user-select: none;      /* IE 10+ */
-	user-select: none; 
+	user-select: none;
 	cursor: default;
 }
 #sandbox_tabs > div{
@@ -434,6 +428,8 @@ s{
 	top: -5px;
     left: -10px;
 }
+
+
 .character #desc{
 	width: calc(100% - 100px);
 	font-size: 18px;
@@ -541,4 +537,3 @@ s{
 .credits a:hover{
 	color:#ee5151;
 }
-

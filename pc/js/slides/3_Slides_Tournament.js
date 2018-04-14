@@ -31,7 +31,7 @@ SLIDES.push({
 		var _addButton = function(character, x, y){
 			(function(character, x, y){
 				self.add({
-					id:"bet_"+character, type:"Button", x:x, y:y, 
+					id:"bet_"+character, type:"Button", x:x, y:y,
 					text_id: "icon_"+character,
 					tooltip: "who_"+character,
 					onclick:function(){
@@ -54,7 +54,7 @@ SLIDES.push({
 			align:"center", color:"#aaa", size:16,
 			text_id:"forgot_whos_who"
 		});
-		
+
 	},
 	onend: function(self){
 		self.remove("bet_tft");
@@ -81,7 +81,7 @@ SLIDES.push({
 		// "First Match" Button
 		self.add({
 			id:"button", type:"Button",
-			x:510, y:130, 
+			x:510, y:130,
 			text_id:"first_match",
 			message: "slideshow/next"
 		});
@@ -102,7 +102,7 @@ SLIDES.push({
 		// Words to the side
 		self.add({
 			id:"text_extra", type:"TextBox",
-			x:510, y:230, width:450, height:500
+			x:510, y:155, width:450, height:500
 		});
 
 		var showTournament = function(num){
@@ -166,7 +166,7 @@ SLIDES.push({
 		// "Next Match" Button
 		self.add({
 			id:"button", type:"Button",
-			x:510, y:420, size:"long",
+			x:510, y:525, size:"long",
 			text_id:"next_match",
 			onclick:function(){
 				_matchNumber++;
@@ -215,7 +215,7 @@ SLIDES.push({
 			id:"button", type:"Button",
 			x:510, y:430, size:"long",
 			text_id:"tournament_teaser",
-			message: "slideshow/scratch"
+			message: "slideshow/next"
 		});
 
 		// DRUMROLL

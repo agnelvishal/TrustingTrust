@@ -1,6 +1,7 @@
 var slideshow, slideSelect;
 window.onload = function(){
 
+//document.addEventListener("click",function(){screenfull.request();},false);
 	// PRELOADER
 	Q.all([
 		Loader.loadAssets(Loader.manifestPreload),
@@ -26,7 +27,7 @@ window.onload = function(){
 		slideSelect.dom.style.display = "none";
 		subscribe("start/game", function(){
 			slideSelect.dom.style.display = "block";
-			$("#translations").style.display = "none";
+
 
 			// [FOR DEBUGGING]
 			publish("slideshow/next");
