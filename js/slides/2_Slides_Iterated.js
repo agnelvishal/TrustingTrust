@@ -141,7 +141,7 @@ sound.fade(0.75,0,1000);
 		 soundjok.once('load',function() {showimg();soundjok.volume(1.0).loop(false).play();} );
 		 soundjok.on('end', function(){
 			 jokerimg.style.visibility ='hidden';
-			 sound.fade(0,.75,11000);
+			 sound.fade(0,.75,20000);
 
 		 });
   }
