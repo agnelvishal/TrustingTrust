@@ -471,10 +471,10 @@ function IteratedPeep(config){
 					// WHOOSH SOUND
 					if(config.opponent){
 						setTimeout(function(){
-							Loader.sounds.whoosh.stereo(0.9).volume(0.8).play();
+							Loader.sounds.fart.stereo(0.9).volume(0.8).play();
 						},50);
 					}else{
-						Loader.sounds.whoosh.stereo(-0.9).volume(0.8).play();
+						Loader.sounds.fart.stereo(-0.9).volume(0.8).play();
 					}
 
 					// EVIL LAUGH
