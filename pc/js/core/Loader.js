@@ -4,16 +4,7 @@ Loader.manifest = {};
 Loader.manifestPreload = {}; // For Preloader
 Loader.sounds = {};
 
-/***************
 
-Actually LOAD all the assets in a manifest. Like so:
-
-Loader.loadAssets(Loader.manifest, function(){
-	Loader.sceneManager.gotoScene(Loader.START_SCENE);
-	Loader.startUpdateAndDraw();
-});
-
-***************/
 Loader.loadAssets = function(manifest, completeCallback, progressCallback){
 
 	var deferred = Q.defer();
@@ -35,7 +26,7 @@ Loader.loadAssets = function(manifest, completeCallback, progressCallback){
 		// Loading sprite or image?
 		if(src.slice(-5)==".json") _totalAssetsToLoad+=2; // Is Sprite. Actually TWO assets.
 		else _totalAssetsToLoad+=1;
-		
+
 	}
 
 	// When you load an asset
@@ -93,19 +84,7 @@ Loader.loadAssets = function(manifest, completeCallback, progressCallback){
 
 };
 
-/***************
 
-Add assets to manifest! Like so:
-
-Loader.addToManifest(Loader.manifest,{
-	bg: "sprites/bg.png",
-	button: "sprites/button/button.json",
-	[key]: [filepath],
-	[key]: [filepath],
-	etc...
-});
-
-***************/
 Loader.addToManifest = function(manifest, keyValues){
 	for(var key in keyValues){
 		manifest[key] = keyValues[key];

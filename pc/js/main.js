@@ -1,8 +1,45 @@
-var slideshow, slideSelect;
+var slideshow;
 window.onload = function(){
 
-//document.addEventListener("click",function(){screenfull.request();},false);
+	var avwords;
+	var requestURL = 'https://ipinfo.io/json';
+	var request = new XMLHttpRequest();
+	request.open('GET', requestURL);
+	request.responseType = 'json';
+	request.onreadystatechange=function(){
+		    if (request.readyState === 4){   //if complete
+		        if(request.status === 200){  //check if "OK" (200)
+		        console.log("location success");
+		        }
+			 else{
+				 avwords="words.html";
+				 console.log("location failure");
+				 hello();
+			 }
+
+    }
+	 };
+
+		request.send();
+		request.onload = function() {
+
+		 var json=request.response;
+		 if(json.region=="Tamil Nadu")
+			 {
+				 avwords="tamilWords.html";
+				 console.log("tamil text");
+				 hello();
+			 }
+			 else
+			 {
+				 avwords="words.html";
+				 console.log("international text");
+				 hello();
+			 }
+		 }
 	// PRELOADER
+	function hello()
+	{
 	Q.all([
 		Loader.loadAssets(Loader.manifestPreload),
 		Words.convert("words.html")
@@ -11,7 +48,7 @@ window.onload = function(){
 		// CHANGE DOM
 		document.body.removeChild($("#preloader"));
 		$("#main").style.display = "block";
-		$("#footer").style.display = "block";
+	//	$("#footer").style.display = "block";
 
 		// Slideshow
 		slideshow = new Slideshow({
@@ -20,13 +57,11 @@ window.onload = function(){
 		});
 
 		// Slide Select
-		slideSelect = new SlideSelect({
-			dom: $("#select"),
-			slides: SLIDES
-		});
-		slideSelect.dom.style.display = "none";
+
+
+
 		subscribe("start/game", function(){
-			slideSelect.dom.style.display = "block";
+
 
 
 			// [FOR DEBUGGING]
@@ -36,12 +71,7 @@ window.onload = function(){
 		});
 
 		// SOUND
-		var _soundIsOn = true;
-		$("#sound").onclick = function(){
-			_soundIsOn = !_soundIsOn;
-			Howler.mute(!_soundIsOn);
-			$("#sound").setAttribute("sound", _soundIsOn?"on":"off");
-		};
+
 
 		// LOAD REAL THINGS
 		Loader.loadAssets(
@@ -59,4 +89,6 @@ window.onload = function(){
 
 	});
 
+
+}
 };

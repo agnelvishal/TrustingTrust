@@ -1,12 +1,47 @@
 var slideshow;
 window.onload = function(){
 
+	var avwords;
+	var requestURL = 'https://ipinfo.io/json';
+	var request = new XMLHttpRequest();
+	request.open('GET', requestURL);
+	request.responseType = 'json';
+	request.onreadystatechange=function(){
+		    if (request.readyState === 4){   //if complete
+		        if(request.status === 200){  //check if "OK" (200)
+		        console.log("location success");
+		        }
+			 else{
+				 avwords="words.html";
+				 console.log("location failure");
+				 hello();
+			 }
 
-	//document.addEventListener("click",function(){screenfull.request();},false);
+    }
+	 };
 
+		request.send();
+		request.onload = function() {
+
+		 var json=request.response;
+		 if(json.region=="Tamil Nadu")
+			 {
+				 avwords="tamilWords.html";
+				 console.log("tamil text");
+				 hello();
+			 }
+			 else
+			 {
+				 avwords="words.html";
+				 console.log("international text");
+				 hello();
+			 }
+		 }
 	// PRELOADER
+	function hello()
+	{
 	Q.all([
-	//	Loader.loadAssets(Loader.manifestPreload),
+		//Loader.loadAssets(Loader.manifestPreload),
 		Words.convert("words.html")
 	]).then(function(){
 
@@ -54,4 +89,6 @@ window.onload = function(){
 
 	});
 
+
+}
 };
