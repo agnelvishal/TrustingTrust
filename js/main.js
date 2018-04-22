@@ -42,7 +42,7 @@ window.onload = function(){
 	{
 	Q.all([
 		//Loader.loadAssets(Loader.manifestPreload),
-		Words.convert("words.html")
+		Words.convert(avwords)
 	]).then(function(){
 
 		// CHANGE DOM

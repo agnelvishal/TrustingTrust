@@ -1,6 +1,6 @@
 {
   "short_name": "Trusting",
-  "name": "Trusting Trust by Agnel Vishal",
+  "name": "Trusting Trust",
   "description": "An interactive story of trust.",
   "lang": "en-US",
   "icons": [
@@ -45,8 +45,6 @@
       "sizes": "16x16",
       "type": "image/png"
     }
-
-
   ],
   "start_url": "mobileIndex.html",
   "display": "fullscreen",
