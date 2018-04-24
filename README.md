@@ -1,6 +1,6 @@
 !["Trusting Trust"](https://i.imgur.com/kde760y.png)
 
-#	PLAY IT HERE: [agnelvishal.github.io/TrustingTrust/](agnelvishal.github.io/TrustingTrust)
+#	PLAY IT HERE: [agnelvishal.github.io/TrustingTrust/](https://agnelvishal.github.io/TrustingTrust)
 
 *Trusting Trust* is made thanks to the many Creative Commons & open source resources out there! Here is a full list of music, sounds, and code used:
 
