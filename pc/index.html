@@ -1,8 +1,45 @@
-<!doctype html>
+
 <html lang="en">
 <head>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
-	
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-47293504-5"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-47293504-5');
+	</script>
+	<!-- TO TRANSLATE: "title", "description" -->
+	<title>Trusting Trust</title>
+	<meta name="description" content="an interactive story on Trust"/>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+	<meta content="utf-8" http-equiv="encoding">
+
+<link rel="manifest" href="manifest.json">
+
+
+	<!-- TO TRANSLATE: "name", "description" -->
+	<meta itemprop="name" content="Trusting Trust">
+	<meta itemprop="description" content="An interactive story of trust.">
+	<meta itemprop="image" content="https://raw.githubusercontent.com/agnelvishal/TrustingTrust/master/social/thumbnail.png">
+
+
+	<!-- TO TRANSLATE: "name", "description" -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@agnelvishal">
+	<meta name="twitter:title" content="Trusting Trust">
+	<meta name="twitter:description" content="An interactive story of trust.">
+	<meta name="twitter:creator" content="@agnelvishal">
+	<meta name="twitter:image" content="https://raw.githubusercontent.com/agnelvishal/TrustingTrust/master/social/thumbnail.png">
+
+	<!-- TO TRANSLATE: "name", "description" -->
+	<meta property="og:title" content="Trusting Trust">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://agnelvishal.github.io/TrustingTrust">
+	<meta property="og:image" content="https://raw.githubusercontent.com/agnelvishal/TrustingTrust/master/social/thumbnail.png">
+	<meta property="og:description" content="An interactive story of trust.">
+
 	<!-- Styles -->
 	<link rel="stylesheet" href="css/slides.css?v11">
 	<link rel="stylesheet" href="css/balloon.css?v11">
@@ -87,3 +124,18 @@
 <!-- Main Code -->
 <script src="js/main.js?v11"></script>
 
+<script>
+
+//Add this below content to your HTML page, or add the js file to your page at the very top to register sercie worker
+if (navigator.serviceWorker.controller) {
+  console.log('[PWA Builder] active service worker found, no need to register')
+} else {
+  //Register the ServiceWorker
+  navigator.serviceWorker.register('pwabuilder-sw.js', {
+    scope: './'
+  }).then(function(reg) {
+    console.log('Service worker has been registered for scope:'+ reg.scope);
+  });
+}
+
+</script>
