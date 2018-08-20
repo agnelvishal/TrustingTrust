@@ -2,7 +2,9 @@
 
 #	PLAY IT HERE: [agnelvishal.github.io/TrustingTrust/](https://agnelvishal.github.io/TrustingTrust)
 
-*Trusting Trust* is made thanks to the many Creative Commons & open source resources out there! Here is a full list of music, sounds, and code used:
+Here is a list of Creative Commons and open source sounds and code used:
+
+**Code:** Forked from [ncase](https://github.com/ncase/trust)
 
 **Music:** "Bleu" by Komiku (CC Zero). [Download their full album on Free Music Archive](http://freemusicarchive.org/music/Komiku/Its_time_for_adventure_/)
 
