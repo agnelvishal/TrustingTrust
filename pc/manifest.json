@@ -45,14 +45,6 @@
       "sizes": "188x188"
     },
     {
-      "src": "assets/icons/windows10/Wide310x150Logo.scale-400.png",
-      "sizes": "1240x600"
-    },
-    {
-      "src": "assets/icons/windows10/Wide310x150Logo.scale-200.png",
-      "sizes": "620x300"
-    },
-    {
       "src": "assets/icons/windows10/Wide310x150Logo.scale-100.png",
       "sizes": "310x150"
     },
@@ -63,10 +55,6 @@
     {
       "src": "assets/icons/windows10/Wide310x150Logo.scale-125.png",
       "sizes": "388x188"
-    },
-    {
-      "src": "assets/icons/windows10/Square310x310Logo.scale-400.png",
-      "sizes": "1240x1240"
     },
     {
       "src": "assets/icons/windows10/Square310x310Logo.scale-200.png",
@@ -159,14 +147,6 @@
     {
       "src": "assets/icons/windows10/StoreLogo.png",
       "sizes": "50x50"
-    },
-    {
-      "src": "assets/icons/windows10/SplashScreen.scale-400.png",
-      "sizes": "2480x1200"
-    },
-    {
-      "src": "assets/icons/windows10/SplashScreen.scale-200.png",
-      "sizes": "1240x600"
     },
     {
       "src": "assets/icons/windows10/SplashScreen.scale-150.png",
@@ -308,10 +288,7 @@
       "src": "assets/icons/android/android-launchericon-48-48.png",
       "sizes": "48x48"
     },
-    {
-      "src": "assets/icons/ios/ios-appicon-1024-1024.png",
-      "sizes": "1024x1024"
-    },
+
     {
       "src": "assets/icons/ios/ios-appicon-180-180.png",
       "sizes": "180x180"
@@ -327,46 +304,6 @@
     {
       "src": "assets/icons/ios/ios-appicon-76-76.png",
       "sizes": "76x76"
-    },
-    {
-      "src": "assets/icons/ios/ios-launchimage-750-1334.png",
-      "sizes": "750x1334"
-    },
-    {
-      "src": "assets/icons/ios/ios-launchimage-1334-750.png",
-      "sizes": "1334x750"
-    },
-    {
-      "src": "assets/icons/ios/ios-launchimage-1242-2208.png",
-      "sizes": "1242x2208"
-    },
-    {
-      "src": "assets/icons/ios/ios-launchimage-2208-1242.png",
-      "sizes": "2208x1242"
-    },
-    {
-      "src": "assets/icons/ios/ios-launchimage-640-960.png",
-      "sizes": "640x960"
-    },
-    {
-      "src": "assets/icons/ios/ios-launchimage-640-1136.png",
-      "sizes": "640x1136"
-    },
-    {
-      "src": "assets/icons/ios/ios-launchimage-1536-2048.png",
-      "sizes": "1536x2048"
-    },
-    {
-      "src": "assets/icons/ios/ios-launchimage-2048-1536.png",
-      "sizes": "2048x1536"
-    },
-    {
-      "src": "assets/icons/ios/ios-launchimage-768-1024.png",
-      "sizes": "768x1024"
-    },
-    {
-      "src": "assets/icons/ios/ios-launchimage-1024-768.png",
-      "sizes": "1024x768"
     },
     {
       "src": "assets/icons/chrome/chrome-extensionmanagementpage-48-48.png",
