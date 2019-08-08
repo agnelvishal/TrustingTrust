@@ -66,7 +66,12 @@
 		<sharing title="Trusting Trust"
 				 text="An interactive story of trust"
 				 link="https://agnelvishal.github.io/TrustingTrust"></sharing>
-
+<button id="signin-button">Sign in with Blockstack </button>
+<script>
+ document.getElementById('signin-button').addEventListener('click', function() {
+   blockstack.redirectToSignIn()
+ });
+</script>
 
 
 	</div>
