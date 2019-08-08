@@ -64,6 +64,15 @@ s{
 /*************************/
 /******* SOUND *******/
 /*************************/
+ #signin-button
+ {
+ 		position: absolute;
+	left:47%;
+	top:5px;
+	width: 100px;
+	height: 50px;
+	cursor: pointer;
+ }
 #sound{
 	position: absolute;
 	left:13px;
