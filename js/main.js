@@ -1,7 +1,7 @@
 var slideshow;
 window.onload = function(){
 
-	var avwords;
+	var avwords="words.html";
 	var requestURL = 'https://ipinfo.io/json';
 	var request = new XMLHttpRequest();
 	request.open('GET', requestURL);
@@ -20,6 +20,8 @@ window.onload = function(){
     }
 	 };
 
+	 try
+	 {
 		request.send();
 		request.onload = function() {
 
@@ -28,27 +30,30 @@ window.onload = function(){
 			 {
 				 avwords="tamilWords.html";
 				 console.log("tamil text");
-				 hello();
 			 }
 			 else
 			 {
 				 avwords="words.html";
 				 console.log("international text");
-				 hello();
 			 }
-		 }
+			}
+		}
+		finally{
+			hello();
+
+		}
 	// PRELOADER
 	function hello()
 	{
 	Q.all([
-		//Loader.loadAssets(Loader.manifestPreload),
+		Loader.loadAssets(Loader.manifestPreload),
 		Words.convert(avwords)
 	]).then(function(){
 
 		// CHANGE DOM
 		document.body.removeChild($("#preloader"));
 		$("#main").style.display = "block";
-	//	$("#footer").style.display = "block";
+		$("#footer").style.display = "block";
 
 		// Slideshow
 		slideshow = new Slideshow({
@@ -57,12 +62,13 @@ window.onload = function(){
 		});
 
 		// Slide Select
-
-
-
+		slideSelect = new SlideSelect({
+			dom: $("#select"),
+			slides: SLIDES
+		});
+		slideSelect.dom.style.display = "none";
 		subscribe("start/game", function(){
-
-
+			slideSelect.dom.style.display = "block";
 
 			// [FOR DEBUGGING]
 			publish("slideshow/next");
@@ -71,7 +77,12 @@ window.onload = function(){
 		});
 
 		// SOUND
-
+		var _soundIsOn = true;
+		$("#sound").onclick = function(){
+			_soundIsOn = !_soundIsOn;
+			Howler.mute(!_soundIsOn);
+			$("#sound").setAttribute("sound", _soundIsOn?"on":"off");
+		};
 
 		// LOAD REAL THINGS
 		Loader.loadAssets(
