@@ -74,7 +74,7 @@
   const userSession = new blockstack.UserSession({ appConfig: appConfig });
 
  document.getElementById('signin-button').addEventListener('click', function() {
-   userSession.redirectToSignIn();
+   userSession.redirectToSignIn(redirectURI="https://sarchy.co/TrustingTrust/pc/index.html");
  });
 
 if (userSession.isUserSignedIn()) {
