@@ -87,6 +87,7 @@
 					encrypt: false
 				}
 				let score = await userSession.getFile("score.txt", options);
+				document.querySelector("#scoreDiv").style.display="block"
 				console.log("score is ");
 				console.log(score);
 			}

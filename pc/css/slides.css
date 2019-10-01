@@ -31,10 +31,11 @@ body{
 
 #scorediv{
 	position: absolute;
+	display: none;
 	color: white;
 	height:40px;
 	top:18px;
-	left:153px;
+	left:300px;
 }
 
 #preloader{
