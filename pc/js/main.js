@@ -1,7 +1,7 @@
 var slideshow;
 window.onload = function(){
 
-	var avwords;
+	var avwords="words.html";
 	var requestURL = 'https://ipinfo.io/json';
 	var request = new XMLHttpRequest();
 	request.open('GET', requestURL);
@@ -20,6 +20,8 @@ window.onload = function(){
     }
 	 };
 
+	 try
+	 {
 		request.send();
 		request.onload = function() {
 
@@ -28,15 +30,18 @@ window.onload = function(){
 			 {
 				 avwords="tamilWords.html";
 				 console.log("tamil text");
-				 hello();
 			 }
 			 else
 			 {
 				 avwords="words.html";
 				 console.log("international text");
-				 hello();
 			 }
-		 }
+			}
+		}
+		finally{
+			hello();
+
+		}
 	// PRELOADER
 	function hello()
 	{
@@ -66,7 +71,7 @@ window.onload = function(){
 			slideSelect.dom.style.display = "block";
 
 			// [FOR DEBUGGING]
-			publish("slideshow/next");
+	 			publish("slideshow/next");
 			//publish("slideshow/scratch", ["credits"]);
 
 		});
