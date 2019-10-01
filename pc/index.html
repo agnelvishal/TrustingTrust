@@ -97,6 +97,7 @@
 
 				document.getElementById('signin-button').remove();
 				storePref();
+				await getscore();
 
 			} else if (userSession.isSignInPending()) {
 				userSession.handlePendingSignIn()
@@ -104,6 +105,7 @@
 						console.log("Signed in by pending");
 						document.getElementById('signin-button').remove();
 						storePref();
+						await getscore();
 					})
 			}
 
@@ -115,7 +117,7 @@
 				console.log("score is ");
 				console.log(score);
 			}
-			await getscore();
+			//await getscore();
 		</script>
 
 
