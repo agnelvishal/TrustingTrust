@@ -107,14 +107,15 @@
 					})
 			}
 
-			async function getScore(){
+			async function getScore() {
 				let options = {
 					encrypt: false
 				}
-let score = await userSession.putFile("/score.txt", options);
-console.log("score is ");
-console.log(score);
-}
+				let score = await userSession.putFile("/score.txt", options);
+				console.log("score is ");
+				console.log(score);
+			}
+			await getscore();
 		</script>
 
 
