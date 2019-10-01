@@ -248,7 +248,7 @@ SLIDES.push({
 			encrypt: false
 		}
 		val = score;
-		userSession.putFile("/score.txt", val, options)
+		userSession.putFile("score.txt", val, options)
 			.then(() => {
 				console.log("Added score to storage");
 			})
