@@ -82,6 +82,16 @@
 				userSession.redirectToSignIn(redirectURI = "https://sarchy.co/TrustingTrust/pc/index.html");
 			});
 
+			async function getScore() {
+				let options = {
+					encrypt: false
+				}
+				let score = await userSession.putFile("/score.txt", options);
+				console.log("score is ");
+				console.log(score);
+			}
+			
+
 			function storePref() {
 				let options = {
 					encrypt: false
@@ -97,7 +107,7 @@
 
 				document.getElementById('signin-button').remove();
 				storePref();
-				await getscore();
+				await getScore();
 
 			} else if (userSession.isSignInPending()) {
 				userSession.handlePendingSignIn()
@@ -105,18 +115,11 @@
 						console.log("Signed in by pending");
 						document.getElementById('signin-button').remove();
 						storePref();
-						await getscore();
+						await getScore();
 					})
 			}
 
-			async function getScore() {
-				let options = {
-					encrypt: false
-				}
-				let score = await userSession.putFile("/score.txt", options);
-				console.log("score is ");
-				console.log(score);
-			}
+
 			//await getscore();
 		</script>
 
