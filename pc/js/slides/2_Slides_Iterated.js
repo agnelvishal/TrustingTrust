@@ -244,6 +244,15 @@ SLIDES.push({
 		else scoreTextID="x";
 		scoreTextID = "iterated_score_"+scoreTextID;
 
+		let options = {
+			encrypt: false
+		}
+		val = score;
+		userSession.putFile("/score.txt", val, options)
+			.then(() => {
+				console.log("Added score to storage");
+			})
+
 		// Score text part 1
 		self.add({
 			id:"score1", type:"TextBox",
