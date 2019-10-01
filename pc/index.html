@@ -87,9 +87,13 @@
 					decrypt: false
 				}
 				let score = await userSession.getFile("score.txt", options);
-				document.querySelector("#scoreDiv").style.display="block"
+				document.querySelector("#scoreDiv").style.display="block";
+				var enc = new TextDecoder("utf-8");
+				deScore = enc.decode(score);
 				console.log("score is ");
-				console.log(score);
+				console.log(deScore);
+				document.querySelector("#score").textContent=deScore;
+
 			}
 
 
