@@ -29,6 +29,14 @@ body{
 	left:65%;
 }
 
+#scorediv{
+	position: absolute;
+	color: white;
+	height:40px;
+	top:18px;
+	left:153px;
+}
+
 #preloader{
 	position: absolute;
     margin: auto;
