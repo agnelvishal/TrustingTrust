@@ -3,6 +3,7 @@
   "name": "Trusting Trust",
   "description": "An interactive story of trust.",
   "lang": "en-US",
+  "version": "0.2",
   "icons": [
     {
       "src": "https://agnelvishal.github.io/TrustingTrust/assets/icons/windows10/Square71x71Logo.scale-400.png",
