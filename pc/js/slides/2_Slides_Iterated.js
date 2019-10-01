@@ -243,7 +243,7 @@ SLIDES.push({
 		else if(score==7) scoreTextID="1";
 		else scoreTextID="x";
 		scoreTextID = "iterated_score_"+scoreTextID;
-
+		document.querySelector("#score").textContent=score;
 		let options = {
 			encrypt: false
 		}
