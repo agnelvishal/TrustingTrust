@@ -166,7 +166,7 @@ SLIDES.push({
 		// "Next Match" Button
 		self.add({
 			id:"button", type:"Button",
-			x:510, y:525, size:"long",
+			x:510, y:225, size:"long",
 			text_id:"next_match",
 			onclick:function(){
 				_matchNumber++;
