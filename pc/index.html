@@ -73,6 +73,8 @@
 		<sharing title="Trusting Trust" text="An interactive story of trust"
 			link="https://agnelvishal.github.io/TrustingTrust"></sharing>
 		<button id="signin-button">Sign in with Blockstack </button>
+		<button id="logout-button" style="display:none">logout </button>
+		
 		<script>
 
 			const appConfig = new blockstack.AppConfig();
@@ -82,6 +84,12 @@
 				userSession.redirectToSignIn(redirectURI = "https://sarchy.co/TrustingTrust/pc/index.html");
 			});
 
+			
+			document.querySelector("#logout-button").addEventListener("click", function(){
+							localStorage.clear();
+			location.reload();
+});
+			
 			async function getScore() {
 				let options = {
 					decrypt: false
@@ -111,6 +119,7 @@
 			if (userSession.isUserSignedIn()) {
 
 				document.getElementById('signin-button').remove();
+				document.querySelector("#logout-button").style.display="block"
 				storePref();
 				 getScore();
 
@@ -119,6 +128,7 @@
 					.then(() => {
 						console.log("Signed in by pending");
 						document.getElementById('signin-button').remove();
+					document.querySelector("#logout-button").style.display="block";
 						storePref();
 						 getScore();
 					})
