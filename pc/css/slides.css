@@ -73,6 +73,17 @@ s{
 /*************************/
 /******* SOUND *******/
 /*************************/
+
+ #logout-button
+ {
+ 	position: absolute;
+	left:60%;
+	top:5px;
+	width: 70px;
+	height: 50px;
+	cursor: pointer;
+ }
+
  #signin-button
  {
  		position: absolute;
